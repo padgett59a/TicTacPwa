@@ -1,0 +1,10 @@
+#ttboard {
+    display: grid;
+    grid-template-columns: 130px 130px 130px;
+    grid-gap: 0px;
+}
+  
+app-square {
+    border: 1px gray solid;
+    height: 130px;
+}

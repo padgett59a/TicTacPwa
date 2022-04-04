@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "akp-fbone"
+  },
+  "targets": {
+    "akp-fbone": {
+      "hosting": {
+        "akpApp": [
+          "akp59tictac"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<span>Anthony Padgett's Amazing Tic Tac Toe Angular App</span>
+
+<h1>Current Player: {{player}}</h1>
+<button nbButton outline status="danger" (click)="newGame()">Start New Game</button><br><br>
+
+<!--structural directive-->
+<h5 *ngIf="winner">
+    Player {{ winner}} won the game. Woot. Woot! 
+</h5> <!-- structural directive-->
+<main>
+    <!--compoonent in-line code is called a template -->
+    <!--[value] passes value to app-square-->
+    <!--makeMove() is defined in the board.component.ts -->
+    <table>
+        <tr><td id="ttboard">
+            <!-- ngFor means render this component multiple times-->
+            <app-square 
+            *ngFor="let val of squares; let i = index"
+              [value]="val"  
+              (click)="makeMove(i)"
+        >
+        </app-square>
+        </td>
+        <td><img *ngIf="winner" height="250px" src="assets/img/confetti.gif"/></td></tr>
+
+    </table>
+</main>
